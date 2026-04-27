@@ -3,128 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variedades LAGA - Excelencia en cada detalle</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Variedades LAGA | Excelencia en cada detalle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Estilos base para replicar el diseño de Nerd sin basura */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            min-h: 100vh;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            background: rgba(0,0,0,0.8);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 90%;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-weight: 900;
-            font-size: 24px;
-            text-transform: uppercase;
-        }
-
-        .logo span { color: #ff4d00; } /* El naranja de LAGA */
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), 
-                        url('TU_IMAGEN_DE_FONDO.jpg'); /* Pon aquí tu imagen de llantas */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #050505; }
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
         }
-
-        h1 {
-            font-size: clamp(40px, 8vw, 80px);
-            margin-bottom: 10px;
-            line-height: 1.1;
-        }
-
-        h1 span { color: #ff4d00; }
-
-        .description {
-            max-width: 600px;
-            font-size: 18px;
-            color: #ccc;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .btn {
-            padding: 15px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            background-color: #ff4d00;
-            color: white;
-        }
-
-        .btn-secondary {
-            border: 2px solid white;
-            color: white;
-        }
-
-        .btn:hover { transform: scale(1.05); }
-
     </style>
 </head>
-<body>
+<body class="text-white">
 
-<header>
-    <div class="logo">Variedades <span>LAGA</span></div>
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#nosotros">Quiénes Somos</a>
-        <a href="#ubicacion">Ubicación</a>
-        <a href="#contacto">Contacto</a>
+    <nav class="flex justify-between items-center px-8 py-6 fixed w-full z-50 bg-black/50 backdrop-blur-md border-b border-white/10">
+        <div class="text-2xl font-black tracking-tighter">VARIEDADES <span class="text-orange-600">LAGA</span></div>
+        <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest">
+            <a href="#" class="hover:text-orange-500 transition">Inicio</a>
+            <a href="#" class="hover:text-orange-500 transition">Servicios</a>
+            <a href="#" class="hover:text-orange-500 transition">Contacto</a>
+        </div>
     </nav>
-</header>
 
-<section class="hero">
-    <h1>Excelencia en <br><span>cada detalle</span></h1>
-    <p class="description">
-        Tu seguridad en carretera es nuestra prioridad. En <b>Variedades LAGA</b>, ofrecemos llantas de alto rendimiento y servicios especializados para que cada viaje sea seguro y confortable.
-    </p>
-    <div class="buttons">
-        <a href="#" class="btn btn-primary">CONÓCENOS</a>
-        <a href="#" class="btn btn-secondary">CONTÁCTANOS</a>
-    </div>
-</section>
+    <section class="hero-gradient h-screen flex flex-col justify-center items-center text-center px-4">
+        <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter leading-none">
+            EXCELENCIA EN <br><span class="text-orange-600">CADA DETALLE</span>
+        </h1>
+        <p class="max-w-xl text-lg md:text-xl text-gray-300 mb-8 font-light">
+            Especialistas en llantas de alto rendimiento y accesorios para tu vehículo. Seguridad y estilo en cada kilómetro.
+        </p>
+        <div class="flex gap-4">
+            <a href="https://wa.me/TU_NUMERO" class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-bold transition transform hover:scale-105">
+                COTIZAR AHORA
+            </a>
+            <a href="#" class="border border-white/30 hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold transition">
+                VER MÁS
+            </a>
+        </div>
+    </section>
+
+    <section class="py-20 bg-zinc-950 border-t border-white/5">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-8">
+            <div class="text-center">
+                <div class="text-orange-600 text-4xl mb-4">★</div>
+                <h3 class="text-xl font-bold mb-2">Calidad Premium</h3>
+                <p class="text-gray-400 text-sm">Trabajamos con las mejores marcas del mercado internacional.</p>
+            </div>
+            <div class="text-center">
+                <div class="text-orange-600 text-4xl mb-4">⛟</div>
+                <h3 class="text-xl font-bold mb-2">Envío Rápido</h3>
+                <p class="text-gray-400 text-sm">Logística eficiente para que no detengas tu camino.</p>
+            </div>
+            <div class="text-center">
+                <div class="text-orange-600 text-4xl mb-4">⚙</div>
+                <h3 class="text-xl font-bold mb-2">Asesoría</h3>
+                <p class="text-gray-400 text-sm">Expertos listos para recomendarte la mejor opción según tu vehículo.</p>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
