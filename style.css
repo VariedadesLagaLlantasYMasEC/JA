@@ -1,34 +1,53 @@
-body { margin: 0; padding: 0; overflow: hidden; font-family: 'Segoe UI', sans-serif; }
-#map { position: absolute; top: 0; bottom: 0; width: 100%; z-index: 1; }
-
-#menu-ui {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 12px;
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #121212; /* Negro elegante */
     color: white;
-    width: 200px;
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-h1 { font-size: 1.1rem; margin: 0 0 15px 0; text-align: center; color: #ffcc00; letter-spacing: 1px; }
+header { padding: 40px; }
+.logo { font-size: 2rem; font-weight: bold; letter-spacing: 2px; }
+.logo span { color: #ffcc00; } /* Amarillo llantera */
 
-.btn {
-    width: 100%;
-    margin-bottom: 8px;
-    padding: 12px;
+.hero { text-align: center; margin-bottom: 50px; }
+.hero h1 { font-size: 3rem; margin: 0; }
+.hero p { color: #888; font-size: 1.2rem; }
+
+.servicios {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 20px;
+    width: 250px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #ffcc00;
+    transform: translateY(-10px);
+}
+
+.card i { color: #ffcc00; margin-bottom: 15px; width: 48px; height: 48px; }
+
+.btn-whatsapp {
+    margin-top: 50px;
+    background-color: #25d366;
+    color: white;
     border: none;
-    border-radius: 6px;
-    background: #ffcc00;
-    color: #000;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.2s;
 }
-
-.btn:hover { background: #ffe066; transform: scale(1.02); }
