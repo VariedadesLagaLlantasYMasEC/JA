@@ -3,22 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Local - Mapa Satelital</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <title>Llantera - Servicio Profesional</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <script src="https://unpkg.com/lucide@latest"></script> </head>
 <body>
 
-    <div id="menu-ui">
-        <h1>MI LOCAL</h1>
-        <button class="btn" onclick="alert('Expertos en el cuidado de tu vehículo.')">¿Quiénes somos?</button>
-        <button class="btn" onclick="alert('Venta de llantas y mantenimiento profesional.')">Servicios</button>
-        <button class="btn" onclick="alert('Visítanos en nuestra ubicación marcada.')">Contacto</button>
-    </div>
+    <header>
+        <div class="logo">LLANTERA <span>EL PANA</span></div>
+    </header>
 
-    <div id="map"></div>
+    <main>
+        <section class="hero">
+            <h1>Seguridad en cada kilómetro</h1>
+            <p>Expertos en llantas y mantenimiento automotriz.</p>
+        </section>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="main.js"></script>
+        <section class="servicios">
+            <div class="card">
+                <i data-lucide="disc"></i>
+                <h3>Llantas Nuevas</h3>
+                <p>Las mejores marcas para tu auto o camioneta.</p>
+            </div>
+            <div class="card">
+                <i data-lucide="settings-2"></i>
+                <h3>Alineación</h3>
+                <p>Tecnología de punta para un manejo suave.</p>
+            </div>
+            <div class="card">
+                <i data-lucide="map-pin"></i>
+                <h3>Ubicación</h3>
+                <p>Quito, Ecuador. ¡Visítanos hoy!</p>
+            </div>
+        </section>
+        
+        <button class="btn-whatsapp" onclick="window.location.href='https://wa.me/tunumerodeteléfono'">
+            Escríbenos por WhatsApp
+        </button>
+    </main>
+
+    <script>lucide.createIcons();</script>
 </body>
 </html>
