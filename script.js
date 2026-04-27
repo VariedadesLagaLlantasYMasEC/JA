@@ -1,30 +1,37 @@
-// Esperar a que el DOM cargue
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Efecto de cambio de color en el Navbar al hacer scroll
-    const navbar = document.querySelector('.navbar');
-    window.onscroll = () => {
-        if (window.scrollY > 50) {
-            navbar.style.backgroundColor = '#000000';
-            navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.5)';
-        } else {
-            navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
-            navbar.style.boxShadow = 'none';
-        }
-    };
+// 1. Efecto Scroll en Navbar
+window.addEventListener('scroll', () => {
+    const nav = document.getElementById('mainNav');
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
 
-    // 2. Desplazamiento suave para los enlaces del menú
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
+// 2. Animación de revelado al bajar (Scroll Reveal)
+const reveal = () => {
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+            el.classList.add('active');
+        }
+    });
+};
+
+window.addEventListener('scroll', reveal);
+
+// 3. Suavizar el scroll en los enlaces
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
     });
-
-    console.log("Variedades LAGA - Sitio cargado correctamente.");
 });
+
+// Ejecutar al cargar para mostrar elementos visibles
+reveal();
