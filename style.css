@@ -1,53 +1,118 @@
+/* Estilos generales */
 body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #121212; /* Negro elegante */
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 0;
 }
 
-header { padding: 40px; }
-.logo { font-size: 2rem; font-weight: bold; letter-spacing: 2px; }
-.logo span { color: #ffcc00; } /* Amarillo llantera */
-
-.hero { text-align: center; margin-bottom: 50px; }
-.hero h1 { font-size: 3rem; margin: 0; }
-.hero p { color: #888; font-size: 1.2rem; }
-
-.servicios {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+/* Navegación */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #222;
 }
 
-.card {
-    background: #1e1e1e;
-    padding: 30px;
-    border-radius: 20px;
-    width: 250px;
-    text-align: center;
-    border: 1px solid #333;
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #ffffff !important;
+}
+
+.brand-laga {
+    color: #ff4d00; /* Naranja corporativo */
+}
+
+.nav-link {
+    color: #ffffff !important;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
     transition: 0.3s;
 }
 
-.card:hover {
-    border-color: #ffcc00;
-    transform: translateY(-10px);
+.nav-link:hover {
+    color: #ff4d00 !important;
 }
 
-.card i { color: #ffcc00; margin-bottom: 15px; width: 48px; height: 48px; }
+/* Sección Hero */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Imagen de fondo profesional */
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+}
 
-.btn-whatsapp {
-    margin-top: 50px;
-    background-color: #25d366;
-    color: white;
-    border: none;
-    padding: 15px 30px;
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    color: #ff4d00;
+}
+
+.lead {
+    font-size: 1.2rem;
+    max-width: 750px;
+    margin: 0 auto 2.5rem;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* Botones */
+.btn-custom {
+    padding: 14px 45px;
     border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary-custom {
+    background-color: #ff4d00;
+    border: 2px solid #ff4d00;
+    color: white;
+}
+
+.btn-primary-custom:hover {
+    background-color: transparent;
+    color: #ff4d00;
+    transform: translateY(-3px);
+}
+
+.btn-secondary-custom {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: white;
+}
+
+.btn-secondary-custom:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: translateY(-3px);
+}
+
+/* Iconos Sociales */
+.social-icons a {
+    color: white;
+    margin-left: 15px;
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff4d00;
 }
